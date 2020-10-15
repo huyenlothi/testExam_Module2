@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Main {
 public static void menu(){
+    while (true){
     System.out.println("---- CHƯƠNG TRÌNH QUẢN LÝ DANH BẠ -----");
     System.out.println("Chọn chức năng theo số (để tiếp tục");
     System.out.println("1. Xem danh sách");
@@ -64,7 +65,7 @@ public static void menu(){
             System.exit(-1);
         default:
             menu();
-    }
+    }}
 }
     public static void main(String[] args) {
 menu();
