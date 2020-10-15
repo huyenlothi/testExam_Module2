@@ -168,13 +168,15 @@ public class PhoneBookManager implements Serializable {
         }
     }
     public static void delete(){
+        PhoneBook phoneBookDelete=null;
         System.out.println("nhập số điện thoại muốn xóa:");
         String phone = new Scanner(System.in).nextLine();
-        for (PhoneBook phoneBook: phoneBookList
-             ) {
+        for (PhoneBook phoneBook: phoneBookList){
+
             if(phoneBook.getPhone().equals(phone)){
-                phoneBookList.remove(phoneBook);
+                phoneBookDelete= phoneBook;
             }
         }
+        phoneBookList.remove(phoneBookDelete);
     }
 }
